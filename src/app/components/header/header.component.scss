@@ -1,0 +1,53 @@
+$border: 1px solid #e5e5e5;
+
+:host { display: block; }
+
+header {
+    display: flex;
+    height: 100%;
+    flex-flow: row nowrap;
+    align-content: center;
+    border-bottom: $border;
+}
+
+.header__logo {
+    display: inline-block;
+    width: calc(100% - 100px);
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: lighter;
+    align-self: center;
+    text-transform: uppercase;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.header__options {
+    display: inline-block;
+    width: 100px;
+    margin: 0;
+    font-size: 12px;
+    
+    button {
+        padding: 10px;
+        display: inline-block;
+        background: transparent;
+        border-left: $border;
+        width: 50%;
+        height: 100%;
+        letter-spacing: -1px;
+        cursor: pointer;
+
+        &:last-of-type {
+            border-right: $border;
+        }
+
+        &.selected {
+            background-color: #e6aa67;
+        }
+    }
+}

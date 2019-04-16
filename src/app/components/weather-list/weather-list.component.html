@@ -1,0 +1,22 @@
+<ul class="weather-list">
+  <li *ngIf="humidity" class="weather-list__item">
+    <span class="weather-list__item-title">humidity</span>
+    <span class="weather-list__item-value">{{ humidity | number:'1.0-2' }} %</span>
+  </li>
+  <li *ngIf="clouds" class="weather-list__item">
+    <span class="weather-list__item-title">clouds</span>
+    <span class="weather-list__item-value">{{ clouds | number:'1.0-2' }} %</span>
+  </li>
+  <li *ngIf="rain" class="weather-list__item">
+    <span class="weather-list__item-title">rain</span>
+    <span class="weather-list__item-value">{{ rain | number:'1.0-2' }} mm</span>
+  </li>
+  <li *ngIf="snow" class="weather-list__item">
+    <span class="weather-list__item-title">snow</span>
+    <span class="weather-list__item-value">{{ snow | number:'1.0-2' }}</span>
+  </li>
+  <li *ngIf="pressure" class="weather-list__item">
+    <span class="weather-list__item-title">pressure</span>
+    <span class="weather-list__item-value">{{ pressure | number:'1.0-2' }} hPa</span>
+  </li>
+</ul>

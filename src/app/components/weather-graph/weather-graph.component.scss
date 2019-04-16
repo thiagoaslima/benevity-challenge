@@ -1,0 +1,30 @@
+:host {
+    display: block
+}
+
+#weather-graph__wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+x-chartist {
+    display: block;
+    padding: 0;
+    width: 120%;
+    height: 100%;
+    margin-left: -12%;
+    
+    /deep/ .ct-series-a {
+        .ct-line,
+        .ct-point {
+            stroke: darken(#bee2f4, 30%);
+        }
+
+        .ct-area {
+           fill: darken(#bee2f4, 50%);
+       }
+    }
+        
+
+}

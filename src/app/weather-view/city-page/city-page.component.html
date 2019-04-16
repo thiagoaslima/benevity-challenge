@@ -1,0 +1,42 @@
+<wt-city-selector></wt-city-selector>
+
+<div class="city__content">
+  <ng-container *ngIf="(dayData$ | async) as dayData">
+    <wt-weather-summary
+      [unit]="unit$ | async"
+      [date]="dayData.date"
+      [temperature]="dayData.temperature"
+      [icon]="dayData.icon"
+      [altIcon]="dayData.altIcon"
+      [description]="dayData.description"
+      [windSpeed]="dayData.windSpeed"
+      [windDirection]="dayData.windDeg"
+    ></wt-weather-summary>
+
+    <wt-weather-list
+      [humidity]="dayData.humidity"
+      [clouds]="dayData.clouds"
+      [rain]="dayData.rain"
+      [snow]="dayData.snow"
+      [pressure]="dayData.pressure"
+    ></wt-weather-list>
+  </ng-container>
+
+  <ng-container *ngIf="(graph$ | async) as graph">
+    <wt-weather-graph
+      [series]="graph.series"
+      [dates]="graph.dates"
+      (selectHour)="handleSelectHour($event)"
+    ></wt-weather-graph>
+  </ng-container>
+</div>
+
+<ng-container *ngIf="(dates$ | async) as datesData">
+  <wt-navigation
+    [unit]="unit$ | async"
+    [selected]="selectedDate$ | async"
+    [dates]="datesData.dates"
+    [temperatures]="datesData.temperatures"
+    (selectDate)="handleSelectDay($event)"
+  ></wt-navigation>
+</ng-container>

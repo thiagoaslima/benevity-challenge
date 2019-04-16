@@ -1,0 +1,9 @@
+<input
+  #input
+  class="search__input"
+  [value]="value$ | async"
+  (input)="handleInput(input.value)"
+  (focus)="cleanField()"
+  (blur)="fillField()"
+  (keyup.enter)="fillField()"
+/>

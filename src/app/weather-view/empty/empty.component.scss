@@ -1,0 +1,37 @@
+:host {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+    "selector"
+    "content";
+
+  @media screen and(min-width: 650px) {
+    background-color: #f5f5f5;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "selector content";
+  }
+}
+
+#content {
+  background-image: url('../../../assets/empty-state.svg');
+  background-position: center 30%;
+  background-size: 150px;
+
+  @media screen and(min-width: 650px) {
+    background-color: darken(#f5f5f5, 10%);
+  }
+}
+
+wt-city-selector {
+    grid-area: selector;
+
+    @media screen and(min-width: 650px) {
+      margin-top: 60px;
+    }
+}
+
+#content {
+  grid-area: content;
+}

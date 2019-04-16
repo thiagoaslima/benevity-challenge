@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    background-color: white;
+    z-index: 9;
+}
+
+.cities-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cities-list__item {
+
+    &+.cities-list__item {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    &.item-selected {
+        background-color: #e5e5e5;
+    }
+}
+
+.cities-list__item__link {
+    display: block;
+    padding: 25px 0;
+    text-indent: 50px;
+    color: #606060;
+    text-decoration: none;
+}

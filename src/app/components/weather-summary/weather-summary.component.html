@@ -1,0 +1,32 @@
+<div class="summary__date">
+  <time [attr.datetime]="date">{{ date | date: 'MMM dd, yyyy HH:mm' }}</time>
+</div>
+<div class="summary__temperature">
+  <img
+    *ngIf="source"
+    class="summary__temperature__icon"
+    [attr.src]="source"
+    [attr.alt]="altIcon"
+  />
+  <h2 class="summary__temperature__value">
+    {{ temperature
+    }}<span class="summary__temperature__value-unit">{{ tempUnit }}</span>
+  </h2>
+</div>
+<div class="summary__others">
+  <p class="summary__description">{{ description }}</p>
+  <p class="summary__wind">
+    <svg
+      class="summary__wind-direction"
+      [style]="transform"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 31.5 31.5"
+    >
+      <path
+        fill="#1e201d"
+        d="M26.5 10.3c.4.4.4 1.1 0 1.6-.5.4-1.2.4-1.6 0l-8-8v26.5c0 .6-.5 1-1.2 1-.6 0-1-.4-1-1V3.8l-8.1 8c-.5.5-1.2.5-1.6 0-.4-.4-.4-1 0-1.5l10-10c.4-.4 1.1-.4 1.5 0l10 10z"
+      />
+    </svg>
+    {{ windSpeed }} m/s
+  </p>
+</div>

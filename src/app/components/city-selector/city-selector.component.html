@@ -1,0 +1,21 @@
+<div class="city-selector__search">
+  <div class="city-selector__search__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <path
+        d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+      />
+    </svg>
+  </div>
+  <wt-search
+    [value]="value$ | async"
+    (changeTerm)="handleChange($event)"
+  ></wt-search>
+</div>
+
+<ng-container *ngIf="(cities$ | async) as cities">
+  <div class="city-selector__results" *ngIf="cities.length > 0">
+    <wt-cities-list
+      [list]="cities"
+    ></wt-cities-list>
+  </div>
+</ng-container>

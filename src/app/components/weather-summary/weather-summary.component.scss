@@ -1,0 +1,37 @@
+:host {
+    display: block;
+    font-size: 13px;
+    padding: 20px;
+}
+
+.summary__temperature__value {
+    display: inline-block;
+    font-size: 45px;
+    margin: 10px 0 0;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.summary__temperature__value-unit {
+    letter-spacing: -5px;
+}
+
+.summary__description,
+.summary__wind {
+    display: inline-block;
+    margin: 0;
+}
+
+.summary__description + .summary__wind::before {
+    content: '•';
+    margin: 0 3px 0 5px;
+}
+
+.summary__date {
+    font-size: 13px;
+}
+
+.summary__wind-direction {
+    display: inline-block;
+    width: 15px;
+    transform-origin: center center; 
+}

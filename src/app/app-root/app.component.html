@@ -1,0 +1,7 @@
+<wt-header
+  [currentUnit]="unit$ | async"
+  (unitChange)="handleUnitChange($event)"
+></wt-header>
+<div id="content">
+  <router-outlet></router-outlet>
+</div>

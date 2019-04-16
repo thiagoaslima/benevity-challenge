@@ -1,0 +1,12 @@
+<ul class="cities-list" *ngIf="citiesList && citiesList.length > 0">
+  <li #listItem
+    *ngFor="let city of citiesList; let idx = index"
+    (click)="selected.emit(city)"
+    class="cities-list__item"
+    [class.item-selected]="idx === selectionIdx"
+  >
+    <a class="cities-list__item__link" [routerLink]="city.href">{{
+      city.name
+    }}</a>
+  </li>
+</ul>

@@ -1,0 +1,25 @@
+:host {
+    display: inline-block;
+}
+
+.weather-list {
+    display: inline-block;
+    margin: 0;
+    padding: 35px 10px;
+    list-style: none;
+    font-size: 14px;
+}
+
+.weather-list__item {
+    padding: 10px 0;
+    border-bottom: 1px solid darken(#bee2f4, 10%);   
+}
+
+.weather-list__item-title {
+    text-transform: capitalize;
+    margin-right: 0.3em;
+}
+
+.weather-list__item-value {
+    font-weight: bold;
+}

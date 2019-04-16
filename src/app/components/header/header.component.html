@@ -1,0 +1,17 @@
+<header>
+  <h1 class="header__logo"><a [routerLink]="['/']">Weather App</a></h1>
+  <div class="header__options">
+    <button
+      [class.selected]="currentUnit === 'Celsius'"
+      (click)="handleUnitChange('Celsius')"
+    >
+      ˚C
+    </button>
+    <button
+      [class.selected]="currentUnit === 'Fahrenheit'"
+      (click)="handleUnitChange('Fahrenheit')"
+    >
+      ˚F
+    </button>
+  </div>
+</header>

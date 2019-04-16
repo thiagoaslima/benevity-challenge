@@ -1,6 +1,7 @@
 <input
   #input
   class="search__input"
+  [placeholder]="placeholder"
   [value]="value$ | async"
   (input)="handleInput(input.value)"
   (focus)="cleanField()"

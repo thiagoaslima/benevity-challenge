@@ -21,6 +21,7 @@ export class SearchComponent {
 
   value$ = merge(this.inputValue$, this.text$);
 
+  @Input() placeholder = '';
   @Input() set value(value: string) {
     this.inputValue$.next(value);
   }

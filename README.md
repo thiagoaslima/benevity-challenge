@@ -102,9 +102,9 @@ Besides the OpenWeather API, I created an API to simulate the autocomplete behav
 
 #### Test
 
-Some unit tests was written to guarantee the correctness of the application. Keep in mind, there was no 100% code coverage objective.
+Some unit tests was written to guarantee the correctness of the application. Keep in mind, there was no 100% code coverage objective. Run `ng test` on your local development to run the tests. 
 
-![alt text](http://thlima.com/benevity-tests.png)
+![alt text](http://thlima.com/benevity/benevity-tests.png)
 
 
 ## License

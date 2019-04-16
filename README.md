@@ -70,6 +70,26 @@ npm install
 
 ```
 
+### Register keys
+
+```
+
+Register the apiKeys on the environment files.
+
+Open src/environments/environment.ts and src/environments/environment.prod.ts,
+and fill the apiKey lines with the follow information
+
+firebase: {
+    apiKey: 'AIzaSyBA2aM64BGgSatdLXwiDK92aSW82ODaBR4'
+}
+
+openweather: {
+    apiKey: '9aa0bfef4e240e8643deeb8be6cc52f3',
+}
+
+```
+
+
 ### Run the code as production server 
 
 ```

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyBA2aM64BGgSatdLXwiDK92aSW82ODaBR4',
+    apiKey: '',
     authDomain: 'weather-app-97336.firebaseapp.com',
     databaseURL: 'https://weather-app-97336.firebaseio.com',
     projectId: 'weather-app-97336',
@@ -13,7 +13,7 @@ export const environment = {
     messagingSenderId: '311401339624'
   },
   openweather: {
-    apiKey: '9aa0bfef4e240e8643deeb8be6cc52f3',
+    apiKey: '',
     url: '//api.openweathermap.org/data/2.5/forecast'
   }
 };

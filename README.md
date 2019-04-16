@@ -58,7 +58,7 @@ git clone https://github.com/thiagoaslima/benevity-challenge.git
 
 ```
 
-cd benevity
+cd benevity-challenge
 
 ```
 
